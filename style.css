@@ -1,77 +1,42 @@
+/* Tu estilo personalizado aquí */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    background: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    text-align: center;
-}
-
-header {
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
-}
-
-header input {
-    width: 70%;
+  }
+  
+  input, select {
     padding: 10px;
-    margin-right: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-header button {
+    margin-bottom: 10px;
+  }
+  
+  button {
     padding: 10px 20px;
-    background: #007bff;
+    background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-}
-
-header button:hover {
-    background: #0056b3;
-}
-
-#task-list {
+  }
+  
+  #task-list {
     list-style: none;
     padding: 0;
-}
-
-#task-list li {
+  }
+  
+  .task {
+    border: 1px solid #ccc;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#task-list li:nth-child(even) {
-    background: #f9f9f9;
-}
-
-.complete-btn, .delete-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #007bff;
-}
-
-.complete-btn:hover, .delete-btn:hover {
-    color: #0056b3;
-}
-
-.completed {
-    text-decoration: line-through;
-    color: #999;
-}
+    margin-bottom: 10px;
+  }
+  

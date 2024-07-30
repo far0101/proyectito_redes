@@ -1,35 +1,23 @@
-document.getElementById('add-task').addEventListener('click', addTask);
-document.getElementById('new-task').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        addTask();
-    }
+const taskForm = document.getElementById('task-form');
+const taskList = document.getElementById('task-list');
+
+taskForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const taskInput = document.getElementById('new-task');
+  const taskPriority = document.getElementById('task-priority').value;
+  const taskDueDate = document.getElementById('task-due-date').value;
+
+  const newTask = document.createElement('li');
+  newTask.classList.add('task');
+  newTask.innerHTML = `
+    <span>${taskInput.value}</span>
+    <span>Prioridad: ${taskPriority}</span>
+    <span>Fecha límite: ${taskDueDate}</span>
+  `;
+
+  taskList.appendChild(newTask);
+  taskInput.value = '';
+  document.getElementById('task-priority').value = '';
+  document.getElementById('task-due-date').value = '';
 });
-
-function addTask() {
-    const taskInput = document.getElementById('new-task');
-    const taskText = taskInput.value.trim();
-    
-    if (taskText === '') {
-        return;
-    }
-
-    const li = document.createElement('li');
-    li.innerHTML = `
-        <span>${taskText}</span>
-        <div>
-            <button class="complete-btn">✓</button>
-            <button class="delete-btn">✗</button>
-        </div>
-    `;
-    
-    document.getElementById('task-list').appendChild(li);
-    taskInput.value = '';
-
-    li.querySelector('.complete-btn').addEventListener('click', () => {
-        li.classList.toggle('completed');
-    });
-
-    li.querySelector('.delete-btn').addEventListener('click', () => {
-        li.remove();
-    });
-}

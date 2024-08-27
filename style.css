@@ -8,30 +8,48 @@ body {
   padding: 0;
   text-align: center;
   background-color: white;
-  position: fixed; 
-  top: 0;
-  left: 0;
   width: 100%; 
+
 }
+
+h1 {
+  margin: 0;
+  padding: 1rem;
+
+}
+
 header {
   padding: 0;
 }
 
 .cuerpo {
   text-align: left;
-  background-color: red;
+  background-color: rgb(255, 254, 254);
   width: 95%;
+  height: 85vh;
   margin: auto;
-  
-  
-
 }
 
-
-
-
-
 h3 {
-  color:aqua
+  color: aqua;
+  margin-left: 2rem;
+}
 
+li{
+  margin-left: 2rem;
+}
+h2{
+  margin-left: 2rem;
+}
+
+.corrected {
+  margin: 15px;
+}
+
+.donete {
+  background-color: skyblue;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: max-content;
+ text-decoration: line-through;
 }

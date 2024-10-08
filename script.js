@@ -6,7 +6,7 @@ function tasklist() {
 
   // validicion del imput (opcional)
   if (!item.trim()) {
-    alert("Ingresa una tarea wachin");
+    alert("Ingresa una tarea");
     return;
   }
 

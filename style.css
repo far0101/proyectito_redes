@@ -22,38 +22,41 @@ h1 {
 
 .cuerpo {
   background-color: #fff;
-  width: 35%;
+  width: 40%;
   min-height: 70vh;
   margin: 2rem auto;
-  padding: 1.5rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }
 
 h2 {
   text-align: center;
   color: #1e88e5;
+  font-size: 1.5rem;
 }
 
 #inputbox {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
-#MainInput {
-  width: 70%;
+#MainInput, #timeInput, #priorityInput {
+  width: 30%;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 1rem;
+  margin-right: 10px;
 }
 
 #mainbutton {
-  padding: 10px 20px;
+  padding: 10px 25px;
   background-color: #1e88e5;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -70,15 +73,46 @@ ul {
 li {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  border-bottom: 1px solid #e0e0e0;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.corrected {
-  margin-left: 10px;
+.low-priority {
+  border-left: 5px solid #4caf50;
 }
 
-.donete {
+.medium-priority {
+  border-left: 5px solid #ff9800;
+}
+
+.high-priority {
+  border-left: 5px solid #f44336;
+}
+
+li.completed {
   text-decoration: line-through;
   color: #9e9e9e;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.3);
+  margin-right: 10px;
+}
+
+.deleteButton {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #c62828;
 }

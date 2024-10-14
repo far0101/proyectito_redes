@@ -10,6 +10,8 @@
     $query = $conexion->prepare("INSERT INTO `usuarios`(`email`, `contraseña`) VALUES (:usuario,:clave)");
     $query->execute([":usuario" => $username, ":clave" => $pass]);
     $result = $query->fetch(PDO::FETCH_ASSOC);
+
+    header("Location: ../ingreso.html");
   
   } catch (PDOException $e) {
 
